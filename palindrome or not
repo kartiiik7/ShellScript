@@ -1,7 +1,7 @@
 #!/bin/bash
 read -p "Enter the string or palindrome:" input
-reverse=$((echo "$input" | rev))
-if[["$input" == "$reverse"]];then
+reverse=$(echo "$input" | rev)
+if["$input" == "$reverse"];then
 echo "It is Palindrome"
 else
 echo "It is Not Palindrome"
