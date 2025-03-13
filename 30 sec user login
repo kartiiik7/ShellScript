@@ -1,0 +1,10 @@
+#!/bin/bash
+while true:
+do 
+  if(who|grip -q "$user");then
+  echo "user Logged in"
+  else 
+  echo "user not Logged in"
+  fi
+  sleep 30;
+done
