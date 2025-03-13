@@ -1,0 +1,9 @@
+#!/bin/bash
+read -p "Enter The Number:" numb
+sum=0
+while((numb>0));do
+digit=$((numb%10))
+sum=$((sum+digit))
+numb=$((numb/10))
+done
+echo "The Sum: $sum"
