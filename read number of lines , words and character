@@ -1,0 +1,16 @@
+#!/bin?bash
+lines=0
+words=0
+ch=0
+while read a
+do
+lines=$((lines+1))
+for words in lines $a
+do
+words=$((words+1))
+ch=$(($ch+${#words}))
+done
+done <"home/destop/script/a.txt>
+echo "No. lines: $lines"
+echo "No. words: $words"
+echo "No. character: $ch"
