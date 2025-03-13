@@ -1,0 +1,10 @@
+#!/bin/bash
+read -p "Enter The First Number:" num1
+read -p "Enter The Second Number:" num2
+if((num1>num2));then
+  echo "$num1 is Largest number"
+elif((num1>num2));then
+  echo "$num2 is Largest number"
+else 
+  echo "Both Number are same"
+if
