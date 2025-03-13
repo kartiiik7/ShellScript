@@ -11,7 +11,7 @@ echo "Result=$result";;
 3)result=$((num1*num2))
 echo "Result=$result";;
 4)if(($num2!=0));then
-result=$((num1+num2))
+result=$((num1/num2))
 echo "Result=$result"
 else 
 echo "No Divisible Possible"
