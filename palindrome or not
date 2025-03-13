@@ -1,7 +1,13 @@
-#!/bin/bash
-read -p "Enter the string or palindrome:" input
-reverse=$(echo "$input" | rev)
-if["$input"=="$reverse"];then
+read -p "Enter a number:" input
+orgnum=$input
+rev=0
+while [ $input -ne 0 ]
+do
+rem=$((input%10))
+rev=$((rev*10+rem))
+input=$((input/10))
+done
+if [ "$orgnum" -eq "$rev" ];then
 echo "It is Palindrome"
 else
 echo "It is Not Palindrome"
