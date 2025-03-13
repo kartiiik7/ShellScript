@@ -1,0 +1,20 @@
+#!/bin/bash
+read -p "Enter the First Number:" num1
+read -p "Enter the Second Number:" num2
+echo "1. Addition 2. Subtraction 3. Multiplication 4. Divison"
+read -p "Enter The arithmetic Operation:" ch
+case $ch in
+1)result=$((num1+num2))
+echo "Result=$result";;
+2)result=$((num1-num2))
+echo "Result=$result";;
+3)result=$((num1*num2))
+echo "Result=$result";;
+4)if (($num2!=0));then
+result=$((num1+num2))
+echo "Result=$result";;
+else 
+echo "No Divisible Possible"
+fi
+*) echo "Invaild Choice";;
+esac
