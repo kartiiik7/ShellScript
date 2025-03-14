@@ -1,7 +1,8 @@
-#!/bin/bash
-while true:
+!/bin/bash
+read -p "Enter username to check if logged in:" user
+while true
 do 
-  if(who|grip -q "$user");then
+  if(who | grep -q "$user");then
   echo "user Logged in"
   else 
   echo "user not Logged in"
