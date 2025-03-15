@@ -1,5 +1,4 @@
-#!/bin/bash
-user_count=$(who | wc - l)
-process_count=$(pstsort -u| wc - l)
+user_count=$(who | wc -l)
+process_count=$(ps | sort -u | wc -l)
 echo "Number of users: $user_count"
 echo "Number of process: $process_count"
