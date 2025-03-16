@@ -1,0 +1,6 @@
+str=input("Enter a Character:")
+rev=str[::-1]
+if(str==rev):
+  print("It is Palindrome")
+else:
+  print("It is NOT Palindrome")
