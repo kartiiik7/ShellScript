@@ -1,1 +1,5 @@
 find -type f -exec ls -lt {} + | nl;
+
+or 
+
+ls -lt | nl
