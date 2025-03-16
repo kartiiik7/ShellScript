@@ -1,0 +1,16 @@
+def is_valid_ip(ip):
+    parts=ip.split(".")
+    if len(parts)!=4:
+        return "Invalid IP Address"
+    for part in parts:
+        if not part.isdigit():
+            return "Invalid IP Address"
+        num=int(part)
+        if num<0 or num>255:
+            return "Invalid IP Address"
+        if part!=str(num):
+            return "Invalid IP Address"
+    return "Valid IP Address"
+
+ip=input("Enter An IP ADDRESS:")
+print(is_valid_ip(ip))
