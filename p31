@@ -1,0 +1,24 @@
+import os
+import glob
+
+def list_files(directory):
+    image_extensions = ("*.jpg", "*.jpeg", "*.png", "*.gif", "*.bmp", "*.tiff", "*.webp")
+    pdf_extension = "*.pdf"
+    image_files = []
+    for ext in image_extensions:
+        image_files.extend(glob.glob(os.path.join(directory, ext)))
+    pdf_files = glob.glob(os.path.join(directory, pdf_extension))
+    return {"Images": image_files, "PDFs": pdf_files}
+
+directory = input("Enter directory path: ")
+if os.path.exists(directory):
+    files = list_files(directory)
+    print("\nImages Found:")
+    for img in files["Images"]:
+        print(img)
+    
+    print("\nPDFs Found:")
+    for pdf in files["PDFs"]:
+        print(pdf)
+else:
+    print("Invalid directory path!")
