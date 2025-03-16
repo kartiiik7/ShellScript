@@ -1,2 +1,5 @@
-find "user/class/batch/" -type f -exec -stat -c
-ls -ut | nt
+find -type f -exec ls -lt {} + | nl;
+
+or 
+
+ls -lt | nl
