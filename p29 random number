@@ -1,0 +1,3 @@
+import random as r
+a=r.randint(0,1000)
+print("Random Number:",a)
