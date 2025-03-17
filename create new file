@@ -9,3 +9,12 @@ fi
 read -p"Enter the filename to create" filename
 touch "$dir/filename"
 echo "file $filename created at $dir"
+
+
+or
+
+
+dir="user/class/batch"
+mkdir -p "$dir"
+touch "$dir/filename"
+echo "file $filename created at $dir"
